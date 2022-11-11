@@ -1,0 +1,41 @@
+{
+  "name": "nri-3-sprint.api-solo",
+  "version": "1.0.0",
+  "description": "API solo project to implement CRUD API",
+  "main": "index.js",
+  "repository": "git@github.com/s6-sakamoto-ib/nri-3-sprint.api-solo.git",
+  "author": "s6-sakamoto-ib",
+  "license": "ISC",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint --fix --ext .js .",
+    "test": "mocha test && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-problems": "^3.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.1",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "bugs": {
+    "url": "https://github.com/s6-sakamoto-ib/nri-3-sprint.api-solo/issues"
+  },
+  "homepage": "https://github.com/s6-sakamoto-ib/nri-3-sprint.api-solo#readme"
+}
