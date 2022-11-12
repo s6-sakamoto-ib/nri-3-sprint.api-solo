@@ -1,0 +1,71 @@
+<form action="/customers/save" method="POST">
+  <input type="hidden" name="id" value="<%= pub?.id %>" />
+  <fieldset name="name">
+    <legend>Pub Name</legend>
+    <div class="form-field">
+      <label for="lastName">Pub Name</label>
+      <input
+        id="pubName"
+        name="pubName"
+        type="text"
+        value="<%= pub?.pubName %>"
+      />
+    </div>
+  </fieldset>
+  <fieldset name="contact">
+    <legend>Pub Contact</legend>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" value="<%= pub?.email %>" />
+    </div>
+  </fieldset>
+  <fieldset name="address">
+    <legend>Pub Address</legend>
+    <div class="form-field">
+      <label for="address">Address Line</label>
+      <input
+        id="address"
+        name="address"
+        type="text"
+        value="<%= pub?.address %>"
+      />
+    </div>
+    <div class="form-field">
+      <label for="city">City</label>
+      <input id="city" name="city" type="text" value="<%= pub?.city %>" />
+    </div>
+    <div class="form-field">
+      <label for="region">Region</label>
+      <input id="region" name="region" type="text" value="<%= pub?.region %>" />
+    </div>
+    <div class="form-field">
+      <label for="country">Country</label>
+      <input
+        id="country"
+        name="country"
+        type="text"
+        value="<%= pub?.country %>"
+      />
+    </div>
+    <div class="form-field">
+      <label for="postalCode">Postal Code</label>
+      <input
+        id="postalCode"
+        name="postalCode"
+        type="text"
+        value="<%= pub?.postalCode %>"
+      />
+    </div>
+    <label for="score">Score</label>
+    <input
+      id="score"
+      name="score"
+      type="text"
+      value="<%= pub?.score %>"
+    />
+  </div>
+  </fieldset>
+  <button type="submit">
+    <%= buttonText %>
+  </button>
+</form>

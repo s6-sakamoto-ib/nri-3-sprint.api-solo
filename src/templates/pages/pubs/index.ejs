@@ -1,0 +1,24 @@
+<%- include('../../partials/header'); %>
+<h2>Pubs</h2>
+<table cellspacing="0">
+  <thead>
+    <th scope="col">ID</th>
+    <th scope="col">Pub Name</th>
+    <th scope="col">Country</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% pub.forEach(function (pub) { %>
+    <tr>
+      <td><%= pub.id %></td>
+      <td><%= pub.pubName %></td>
+      <td><%= pub.country %></td>
+      <td><a href="/pubs/edit/<%= pub.id %>">Edit</a></td>
+      <td><a href="/pubs/view/<%= pub.id %>">View</a></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<a href="/pubs/new">Add New Pub</a>
+<%- include('../../partials/footer'); %>
