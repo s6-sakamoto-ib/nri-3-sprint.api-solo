@@ -34,7 +34,7 @@ describe("Pub API Server", () => {
       const expect = pubFixture;
 
       // Execute
-      const res = await request.get("/pubs");
+      const res = await request.get("/api/pubs");
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect);
     });
@@ -45,7 +45,7 @@ describe("Pub API Server", () => {
       const expect = pubFixture.slice(0, 2);
 
       // Execute
-      const res = await request.get("/pubs").query({ limit: 2 });
+      const res = await request.get("/api/pubs").query({ limit: 2 });
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect);
@@ -57,7 +57,7 @@ describe("Pub API Server", () => {
       const expect = pubFixture[1];
 
       // Execute
-      const res = await request.get("/pubs/2");
+      const res = await request.get("/api/pubs/2");
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect);
@@ -69,7 +69,7 @@ describe("Pub API Server", () => {
       const expect = pubFixture[1];
 
       // Execute
-      const res = await request.get("/pubs/002");
+      const res = await request.get("/api/pubs/002");
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect);
@@ -81,7 +81,7 @@ describe("Pub API Server", () => {
       const expect = pubFixture[2];
 
       // Execute
-      const res = await request.get("/pubs/pub_3");
+      const res = await request.get("/api/pubs/pub_3");
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect);
@@ -124,7 +124,7 @@ describe("Pub API Server", () => {
       };
 
       // Execute
-      const res = await request.put("/pubs").send(expect);
+      const res = await request.put("/api/pubs").send(expect);
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect.id);
@@ -154,7 +154,7 @@ describe("Pub API Server", () => {
       };
 
       // Execute
-      const res = await request.post("/pubs").send(expect);
+      const res = await request.post("/api/pubs").send(expect);
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(expect.id);
@@ -178,7 +178,7 @@ describe("Pub API Server", () => {
     // register store
     it(`DELETE /pubs delete pub data `, async () => {
       // Execute
-      const res = await request.delete("/pubs").send(addedPubFixture);
+      const res = await request.delete("/api/pubs").send(addedPubFixture);
 
       // Assertion
       JSON.parse(res.text).should.deep.equal(addedPubFixture.id);

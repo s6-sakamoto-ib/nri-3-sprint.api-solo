@@ -31,11 +31,11 @@ const setupServer = () => {
   });
 
   // Pub routes
-  app.get("/pubs", pubController.getAll);
-  app.get("/pubs/:idOrName", pubController.getByIdOrName);
-  app.put("/pubs", pubController.save);
-  app.post("/pubs", pubController.create);
-  app.delete("/pubs", pubController.delete);
+  app.get("/api/pubs", pubController.getAll);
+  app.get("/api/pubs/:idOrName", pubController.getByIdOrName);
+  app.put("/api/pubs", pubController.save);
+  app.post("/api/pubs", pubController.create);
+  app.delete("/api/pubs", pubController.delete);
 
   app.get("/error", (req, res) => {
     console.log(res);
